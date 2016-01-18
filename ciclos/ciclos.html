@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Ciclos</title>
+	<script type="text/javascript">
+var c,t,b;
+	function calcular()
+	{
+		var numero = Number(t.value);
+		var calculo = 1;
+		var n = 1;
+
+		//Esto es un ejemplo de factorial con 
+		for (n=1; n<= numero; n++)
+		{
+		calculo = calculo*n;
+		}
+		c.innerHTML = "<strong>" + calculo + "</strong>";
+
+		/*
+		//Este es el ejemplo de un factorial con while
+		while (n <=numero)
+		{
+			calculo=calculo*n;
+			n++;
+		}
+		c.innerHTML = "<strong>" + calculo + "</strong>";
+		*/
+	}
+
+	
+
+	function inicio()
+	{
+		 c = document.getElementById("caja");
+		 t = document.getElementById("alejandra");
+		 b = document.getElementById("botoncito");
+
+		b.addEventListener("click",calcular)
+
+
+		/*	
+		//Ejemplo de while, y modulo
+		//Este ejemplo calcula los numeros pares del 1 a 50
+		var numeros = 1;
+		while (numeros<=50)
+		{
+			residuo = numeros % 2;
+			if (residuo==0)
+			{
+				c.innerHTML += "  " + numeros;
+			}
+			numeros++;
+		}
+		//c.innerHTML += "<strong> Bye </strong> <br/> <em> papá </em> !";
+		*/
+		/*
+		//Esto es un ejemplo del uso de 	WHILE con javascript
+		var gritos = 10;
+		while (gritos>0)
+		{
+			c.innerHTML +="a";
+			gritos=gritos-1;
+		}
+		c.innerHTML += "h!";
+		*/
+	}
+	</script>
+</head>
+<body>
+<input type="text" id="alejandra" />
+<input type="button" id="botoncito" value="Tocame~" />
+<div id="caja">Nada</div>
+<div>Otra caja</div>
+<script type="text/javascript">
+	inicio();
+</script>
+</body>
+</html>
