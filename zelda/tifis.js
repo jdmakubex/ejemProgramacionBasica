@@ -65,9 +65,29 @@ document.addEventListener("keydown", teclado);
 function teclado(datos){
 	// Guardo en "codigo" el numero de la tecla oprimida
 	var codigo = datos.keyCode;
+	
 	if (codigo == teclas.UP){
 		tifis.y-=tifis.velocidad;
 	}
+
+	if (codigo == teclas.DOWN){
+		tifis.y+=tifis.velocidad;
+	}
+
+
+	if (codigo == teclas.LEFT){
+			tifis.x-=tifis.velocidad;
+		}
+
+
+	if (codigo == teclas.RIGHT){
+			tifis.x+=tifis.velocidad;
+		}
+
+
+
+
+
 	dibujar();
 }
 
