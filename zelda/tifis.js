@@ -1,4 +1,12 @@
 var tablero;
+
+var teclas = {
+	UP: 38,
+	DOWN: 40,
+	LEFT: 37,
+	RIGHT:39
+};
+
 //Declaro mi objeto fondo de tipo JSON (JavaScript Object Notation)
 var fondo = {
 	imagenURL: "fondo.png"
@@ -8,7 +16,8 @@ var tifis = {
 	y:100,
 	x:100,
 	frenteURL: "diana-frente.png",
-	frenteOK: false 
+	frenteOK: false,
+	velocidad : 20 
 };
 
 var liz = {
@@ -46,9 +55,20 @@ function inicio(){
 	var m = document.getElementById("mover");
 	m.addEventListener("click",movimiento);
 */
+//Invoco el evento de precionar el teclado y lanzo la funcion teclado
+document.addEventListener("keydown", teclado);
 
 
 
+}
+
+function teclado(datos){
+	// Guardo en "codigo" el numero de la tecla oprimida
+	var codigo = datos.keyCode;
+	if (codigo == teclas.UP){
+		tifis.y-=tifis.velocidad;
+	}
+	dibujar();
 }
 
 function confirmarFondo(){
