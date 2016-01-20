@@ -1,4 +1,4 @@
-var tablero;
+var tablero, direccion;
 
 var teclas = {
 	UP: 38,
@@ -17,6 +17,12 @@ var tifis = {
 	x:100,
 	frenteURL: "diana-frente.png",
 	frenteOK: false,
+	atrasURL: "diana-atras.png",
+	atrasOK: false,
+	derURL: "diana-der.png",
+	derOK: false,
+	izqURL: "diana-izq.png",
+	izqOK: false,
 	velocidad : 20 
 };
 
@@ -44,6 +50,18 @@ function inicio(){
 	tifis.frente = new Image();
 	tifis.frente.src = tifis.frenteURL;
 	tifis.frente.onload = confirmarFrente;
+
+	tifis.atras = new Image();
+	tifis.atras.src = tifis.atrasURL;
+	tifis.atras.onload = confirmarAtras;
+
+	tifis.der = new Image();
+	tifis.der.src = tifis.derURL;
+	tifis.der.onload = confirmarDer;
+
+	tifis.izq = new Image();
+	tifis.izq.src = tifis.izqURL;
+	tifis.izq.onload = confirmarIzq;
 
 	liz.lizy = new Image();
 	liz.lizy.src = liz.lizURL;
@@ -84,10 +102,7 @@ function teclado(datos){
 			tifis.x+=tifis.velocidad;
 		}
 
-
-
-
-
+	direccion = codigo;
 	dibujar();
 }
 
@@ -99,6 +114,21 @@ function confirmarFondo(){
 
 function confirmarFrente(){
 	tifis.frenteOK = true;
+	dibujar();
+}
+
+function confirmarAtras(){
+	tifis.atrasOK = true;
+	dibujar();
+}
+
+function confirmarDer(){
+	tifis.derOK = true;
+	dibujar();
+}
+
+function confirmarIzq(){
+	tifis.izqOK = true;
 	dibujar();
 }
 
@@ -114,14 +144,35 @@ function dibujar(){
 	}
 
 	//Capa 2: Tifis
-	if (tifis.frenteOK == true){
-		tablero.drawImage(tifis.frente,tifis.x, tifis.y);
-	}
-
-	//Capa 3: Liz
 	if (liz.lizOK){
 		tablero.drawImage(liz.lizy, liz.x,liz.y);
 	}
+	
+
+	//Capa 3: Liz
+	var tifiDibujo = tifis.frente;
+	if (tifis.frenteOK && tifis.atrasOK && tifis.izqOK && tifis.derOK){
+
+		if (direccion == teclas.UP){
+			tifiDibujo = tifis.atras;
+		}
+
+		if (direccion == teclas.DOWN){
+			tifiDibujo = tifis.frente;
+		}
+
+		if (direccion == teclas.LEFT){
+			tifiDibujo = tifis.izq;
+		}
+
+		if (direccion == teclas.RIGHT){
+			tifiDibujo = tifis.der;
+		}
+
+		tablero.drawImage(tifiDibujo,tifis.x, tifis.y);
+	}
+
+	
 }
 
 /*
