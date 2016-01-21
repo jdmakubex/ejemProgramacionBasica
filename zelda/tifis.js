@@ -23,7 +23,7 @@ var tifis = {
 	derOK: false,
 	izqURL: "diana-izq.png",
 	izqOK: false,
-	velocidad : 20 
+	velocidad : 50 
 };
 
 var liz = {
@@ -155,21 +155,43 @@ function dibujar(){
 
 		if (direccion == teclas.UP){
 			tifiDibujo = tifis.atras;
+			//Se establecen los obstaculos hacia arriba
+			if ((tifis.y <0)||(tifis.y<250 && tifis.x<150 && tifis.y >150) || (tifis.x==200 &&tifis.y<250)|| (tifis.y < 400 && tifis.y > 300 && tifis.x>=150)){
+				tifis.y += tifis.velocidad;
+				//console.log("Y igual a: ",tifis.y);
+			}
 		}
 
 		if (direccion == teclas.DOWN){
 			tifiDibujo = tifis.frente;
+			//Se establecen  los obstaculos hacia abajo
+			if ((tifis.y>300 && tifis.x>=150 && tifis.y<450) || (tifis.y>150  && tifis.x<150 && tifis.y<300) || (tifis.y >=500) ) {
+				tifis.y -= tifis.velocidad;
+				//console.log("Y igual a: ",tifis.y);
+			}
 		}
 
 		if (direccion == teclas.LEFT){
 			tifiDibujo = tifis.izq;
+			//Se establecen obstaculos hacia la izquierda
+			if ((tifis.x < 0) || ( tifis.y===200 && tifis.x===100) || (tifis.y <250 && tifis.x>150  && tifis.x <250)){
+				tifis.x += tifis.velocidad;
+			
+			}
 		}
 
 		if (direccion == teclas.RIGHT){
 			tifiDibujo = tifis.der;
+			//Se establecen Obstaculos hacia la derecha
+			if ((tifis.x >=500)||(tifis.x===150 &&  tifis.y ===350) || (tifis.y < 250 && tifis.x < 250 && tifis.x > 150)){
+				tifis.x -= tifis.velocidad;
+			}
 		}
 
 		tablero.drawImage(tifiDibujo,tifis.x, tifis.y);
+			console.log("X igual a: ",tifis.x);
+
+				console.log("Y igual a: ",tifis.y);
 	}
 
 	
