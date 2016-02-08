@@ -1,0 +1,119 @@
+/*Usando notacion Hecadecimal*/
+color: #000000; /* negro */
+color: #ffffff; /* blanco */
+color: #ff0000; /* rojo */
+color: #00ff00; /* verde */
+color: #0000ff; /* azul */
+color: #ee82ee; /* violeta */
+
+/* La propiedad color define el color de texto del elemento. */
+
+/*Usando notacion RGB*/
+color: rgb(0,0,0); /* negro */
+color: rgb(255,255,255); /* blanco */
+color: rgb(255,0,0); /* rojo */
+color: rgb(0,255,0); /* azul */
+color: rgb(0,0,255); /* verde */
+color: rgb(238,130,238); /* violeta */
+
+/* La propiedad color define el color de texto del elemento. */
+
+
+/*Usando RGB,el ultimo parametro define la transparencia u opacidad*/
+/* Negro (traslucido al 50%) */
+color: rgba(0,0,0,0.5);
+
+/* Blanco (traslucido al 20%) */
+color: rgba(255,255,255,0.2);
+
+/*FUENTES*/
+font-family: Arial, Helvetica, Verdana;
+/*Se declaran 3, y el orden si importa por que donde  el navegador reenderiza la pagina
+tratara de hacerlo con la fuente arial, si esa fuente no está instalada en esa computadora
+intentará reederizar los textos con Helvetica, y si no la encuentra instalada en la coputadora
+lo hará con la fuente verdan*/
+
+/*EL TAMAÑO DE LA FUENTE*/
+font-size: 20px;
+
+/* 1em es igual al tamaño de la fuente actual heredada; es escalable */
+font-size: 1em;
+
+/* Los puntos son unidades de impresión */
+font-size: 12pt;
+
+/*Para definir curveado hascia la derecha*/
+font-style: italic;
+
+
+/*Para establecer una fuente en negrita*/
+font-weight: bold;
+font-weight: normal;
+
+
+/*Podemos personalizar el grosor del ancho de la fuente haciendola mas delgada o mas gorda*/
+font-weight: 300;
+font-weight: 400;
+font-weight: 700;
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*ALINEACION Y DECORACION DE TIPOGRAFÍA*/
+line-height: 30px; /*Alto o separacion de las líneas
+
+/*Para alinear el Texto*/
+text-align: left;
+text-align: center;
+text-align: right;
+
+/*Decoracion del Texto*/
+/* Subrayado */
+text-decoration: underline;
+
+/* Linea sobre el texto */
+text-decoration: overline;
+
+/* Linea atravesando el texto */
+text-decoration: line-through;
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*Transformación del Texto*/
+/* Tranformar todo a mayúsculas */
+text-transform: uppercase;
+
+/* Tranformar todo a minúsculas */
+text-transform: lowercase;
+
+/* Capitalizar la primer letra de cada palabra */
+text-transform: capitalize;
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*Sombras en Textos*/
+/* Sombra de color rojo */
+/*
+1.- Valor 1 es la posición de la sombra en eje X
+2.- Valor 1 es la posición de la sombra en eje Y
+3.- Valor 3 Es el difuminado
+ */
+text-shadow: 1px 2px 0 #ff0000;
+
+/* Sombra de color negro con 50% transparencia */
+text-shadow: 1px 2px 0 rgba(0,0,0,0.5);
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*También podemos importar fuentes que no están instaladas en nuestra computadora
+y hacer que funcionen en nuestra página, desde http://www.google.com/webfonts 
+
+<html>
+	<head>
+		<title></title>
+		<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+Despues de eso ya lo podemos usar así en nuestro CSS
+*/
+font-family: 'Lato', sans-serif;

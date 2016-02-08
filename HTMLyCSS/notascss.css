@@ -1,0 +1,46 @@
+/*FUENTE DE LOS APUNTES:
+https://www.acamica.com
+*/
+
+.caja {
+	/*el alto del elemento*/
+	height: 300px;
+	/*El Ancho del elemento*/
+	width: 400px;
+	/*//El el grueso del margen del elemento*/
+	border: 2px solid red;
+	/*//(Maneja 3 parametro, el gurso del borde, solid quiere decir que no es punteado, o rayado, y el tercer parametro es el color del borde)
+	//EL margen es el espacio del elemento hacia afuara o hacia otro elemento externo*/
+	margin: 15px;
+	/*//Es el espaciado desdel el borde hacia adentro, hacia el contenido interno*/
+	padding: 30px;
+	margin-left: 25px
+;	/*//Para aṕlicar bortes redondeados*/
+	border-radius: 10px;
+
+	/*Border, margin, y border radius cuando solo se define una sola media 
+	estamos definiciendo la medida de los cuatro lados del elemento al mismo tiempo, 
+	pero se puede personalizar cada lado en específico como se muestra a continuacion
+	*/
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	/*Box shadow me permite agregar sombras
+	1.- El Primer valor me permite definir la posicion de la sombra en el eje de las X
+	2.- El segundo valor me permite definir la posicion de la sombra en el eje de las Y
+	3.- El tercer valor me permite definir la difuminación de la sombra, mas oscura (0) o mas clara (>0)
+	4.- El cuarto valor es el color de la sombra, se pueden usar colores solidos o con opacidad (o transparencia) 
+
+	NOTA: para usar valores con opacidad utilizamos valores rgba donde los primeros 3 valores son los valores RGB, 
+	y el cuarto valor es el nivel de transparencia, medidos de 0 a 1 de opacidad
+
+	para que el sombreado  sea interno o hacia adentro utilizamos: inset;
+	*/
+	box-shadow: inset 5px 10px 5px rgba(0,0,0,0.5);
+
+	/*Se pueden definir sombreados desde varios puntos en forma simultanea
+	por ejemplo que venga desde la izquieda, desde abajo y desde arriba al mismo tiempo
+	separados por comas*/
+	box-shadow: inset 0 5px 5px rgba(0,0,0,0.5), inset 5px 0 5px rgba(0,0,0,0.5), inset -5px 0 5px rgba(0,0,0,0.5);
+}

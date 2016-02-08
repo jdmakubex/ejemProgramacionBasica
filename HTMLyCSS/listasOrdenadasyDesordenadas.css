@@ -1,0 +1,25 @@
+
+/*Para cambiar el tipo de numeracion que se muestra en las listas ordenadas*/
+/* Numeración romana */
+ol {
+	list-style: upper-roman;
+}
+
+/* Numeración por letras */
+ol {
+	list-style: lower-alpha;
+}
+
+/*Para cambiar los tipos de viñetas que se muestran en una lista desordenada de HTML*/
+list-style: disc;
+list-style: circle;
+list-style: square;
+
+/*Para dar formato de menu a una lista*/
+ul li {
+	display: inline-block;
+}
+
+ul li {
+	float: left;
+}

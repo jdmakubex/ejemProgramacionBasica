@@ -1,0 +1,55 @@
+/*PSEUDOCLASES
+Son selectores de CSS utilizados sobre las mismas clases o elementos
+referenciados en CSS, se definen con el simbolo dos puntos seguido del nombre
+de la psucoclase
+por ejemplo para:
+
+<a href="index.html">Click aquí</a>
+
+en un html,
+
+El siguiente codigo css se ejecutará cuando  pasemos el mouse sobre elemento <a>
+al salir volverá al estilo normal.
+*/
+a {
+	color: red;
+}
+a:hover {
+	color: blue;
+	font-size: 20px;
+}
+
+/*Cuando un elemento tiene el foco, con tab, conel cursor,  etc*/
+input:focus {
+	color: red;
+	border: 1px solid red;
+}
+
+/*pseudo clases estructurales
+Están dadas por la estructura del sitio, no por la interacción del usuario
+*/
+/* Modificar el primer elemento <a> en un mismo nivel de jerarquía */
+a:first-child {
+	border-left: 1px solid rgb(15,15,15);
+}
+
+/* Modificar el último elemento <a> en un mismo nivel de jerarquía */
+a:last-child {
+	border-right: 1px solid #ff9900;
+}
+
+/*por ejemplo*/
+#mielemento div:first-child {
+	background-color: green;
+}
+#mielemento div:last-child {
+	height: 50px;
+	background-color: blue;
+}
+
+
+
+/*Asignar al ultimo li del elemento ul, una fuente negrita*/
+ul li:last-child{
+  font-weight:bold;
+}

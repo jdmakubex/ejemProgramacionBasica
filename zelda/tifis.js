@@ -74,6 +74,7 @@ function inicio(){
 	m.addEventListener("click",movimiento);
 */
 //Invoco el evento de precionar el teclado y lanzo la funcion teclado
+/////*:::::::::::::::::::::::::::::::ojo:::::::::::::::::::::::::::::::::.*/
 document.addEventListener("keydown", teclado);
 
 

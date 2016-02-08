@@ -1,0 +1,45 @@
+/* POSICIONAMIENTO - positions*/
+/*nos ayuda a posicionar los elementos dentro de la estructura HTML
+por defecto los elementos tienen el valor de static, pero podemos darle los valores de relative, absolute, o fixed
+*/
+
+/**para usar los valores de posicion de la caja, en  base a elemento padre
+los valores de posiicon son: 
+
+top: 0;
+left: 15px;
+right: 50%;
+bottom: 0px;
+
+*/
+
+
+position: relative;
+
+
+/*Parecida a  relative, pero se basa en el documento no en el elemento*/
+position: absolute;
+
+/*Se refiere al espacio visible del documento, la pantalla visible, 
+o sea que si escroleamos, el elemento permanecera visible en la pantalla independientemente que recoramos la pagina con con scroll*/
+#elemento {
+	position: fixed;
+	bottom: 0;
+}
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+/*Floats - Sirve para alinear elementos de bloque
+rompe con el orden natural del elemento, 
+
+sirve para distribuir u ordenar a la izquierda o la derecha de un elemento padre */
+
+float: right;
+
+/* Reinicia el flujo del documento de un lado */
+clear: left;
+clear: right;
+
+/* Reinicia el flujo del documento de ambos lados */
+clear: both;
+

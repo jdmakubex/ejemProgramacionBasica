@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form>
+	<input type="text" value="" name="campo1">
+	<textarea name="campo2"></textarea>
+	<input type="email">
+	<input type="date">
+	<input type="time">
+	<input type="tel">
+
+	<input type="text" value="Nombre de usuario" disabled>
+	<!-- El atributo disabled nos permite deshabilitar un metodo de entrada cuando no queremos que el usuario ingrese o modifique la información-->
+	<input type="submit" value="Enviar">
+	<!-- Tambien se puede agregar el type reset-->
+
+</form>
+<form>
+	<input type="radio" name="pais" value="argentina"> Argentina
+	<input type="radio" name="pais" value="colombia"> Colombia
+	<input type="radio" name="pais" value="espana"> España
+	<input type="radio" name="pais" value="chile"> Chile
+	<input type="radio" name="pais" value="mexico"> México
+	<input type="radio" name="pais" value="Sorojobia" checked>
+	<!--checked es un atributo que debemos usar si queremos que un valor venga seleccionado por defecto-->
+
+</form>
+<form>
+	<input type="checkbox" name="pais" value="argentina"> Argentina
+	<input type="checkbox" name="pais" value="colombia"> Colombia
+	<input type="checkbox" name="pais" value="espana"> España
+	<input type="checkbox" name="pais" value="chile"> Chile
+	<input type="checkbox" name="pais" value="mexico"> México
+	<input type="checkbox" name="pais" value="colombia" checked>
+	<!--checked es un atributo que debemos usar si queremos que un valor venga seleccionado por defecto-->
+
+
+</form>
+<form>
+<!-- Es posible utilizar aqui el atributo mulple-->
+	<select name="pais">
+		<option>Argentina</option>
+		<option>México</option>
+		<option>España</option>
+		<option selected>Chile</option>
+		<!-- selectec nos sirve para que una opcion aparezca seleccionada por default en un select -->
+	</select>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+/*Fondos*/
+background-color: red;
+/*Igual podemos usar RGB o colores hexadecimales*/
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.*/
+/*FONDOS CON IMAGENES*/
+
+/* Fondo de imagen local */
+background-image: url(imagen.jpg);
+
+/* Fondo de imagen externa */
+background-image: url(http://sc.acamica.com/img/logo.png);
+
+/* Repite la imagen de fondo */
+background-repeat: repeat;
+
+/* No repite la imagen de fondo */
+background-repeat: no-repeat;
+
+/* Repetir sólo en un eje */
+background-repeat: repeat-x;
+background-repeat: repeat-y;
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::.*/
+/* Centrar imagen de fondo */
+background-position: center center;
+
+/* Alinear imagen de fondo */
+background-position: left top;
+background-position: right bottom;
+
+background-position: 0 100%;
+background-position: 50px 0;
+
+/*Podemos agregar varias imagenes  de fondo a un elemento*/
+background-image: url(imagen1.jpg), url(imagen2.jpg), url(imagen3.jpg);
+
+
+
+/*::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+/*FONDOS CON DEGRADADOS*/
+background-image: linear-gradient(red, blue); /*Degradado de un color a otro*/
+
+background-image: linear-gradient(#000000, rgba(0,0,0,0.5));
+
+/*DEGRADADO RADIAL, del centro hacia afuera*/
+background-image: radial-gradient(#ff0000, #333333);
+
+background-image: radial-gradient(rgb(255,255,255), rgba(255,255,255,0.5));
+
+/*Stops, son paradas antes de llegar al color final*/
+background-image: linear-gradient(#ff00cc, #0000ff, #ffffff, #ffcc00, #393939);
