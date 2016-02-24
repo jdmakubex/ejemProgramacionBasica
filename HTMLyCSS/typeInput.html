@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Ejemplos de Valores para Input Type</title>
+</head>
+<body>
+<form>
+URL: <br/>
+	<input type="url" name="url"/>
+ <br/>telefono <br/>
+	<input type="tel" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title='Phone Number (Format: +52(01)9999-9999)'/>
+	<br/>Email:<br/>
+	<input type="email" name="email" />
+	<br/>Edad:<br/>
+	<input type="number" name="edad" min="18" max="65" value="18"/>
+	<br/>Color Favorito:<br/>
+	<input type="color" name="favColor" value="#123456"/>
+	<br/>Busqueda<br/>
+	<input type="search" name="Buscador"/>
+	<br/>Rango:<br/>
+	<input type="range" name="puntos" min="1" max="10" value="2" />
+	<br/>Tiempo - Hora - Local<br/>
+	<input type="datetime-local" name="fechahora" />
+	<br/>Fecha:<br/>
+	<input type="date" name="fecha" />
+	<br/>Mes y Año Específicos:<br/>
+	<input type="month" name=mes />
+	<br/>Seleccione Semana y año especificos<br/>
+	<input type="week" name="semana"/>
+	<br/>Seleccione la hora exacta<br/>
+	<input type="time" name="hora"/>
+	<br/><input type="submit"/>
+</form>
+</body>
+</html>

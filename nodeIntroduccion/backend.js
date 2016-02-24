@@ -6,6 +6,16 @@ var bd = {
 	pass: "123456"
 };
 
+
+/*
+Para que corra bien esto... debemos instalar las siguientes dependencias con npm install
+express
+body-parser
+ */
+
+/*
+Tarea Explorar Jade, es un alibrería especializada en comprimir html, css, y otros archivos estáticos , los empaqueta y los envía para visualizarlos
+ */
 console.log("Arrancando server de Node");
 
 var express = require("express");

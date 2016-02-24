@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+</head>
+<body>
+<form autocomplete="on">
+<!-- Autocomplete lo podemos activar o desactivar segun se requuiera para sugerir y autocompletar campos con datos que el usuario captura usualmente-->
+<br/>Sin Autocompletar Campo email:<br/>
+	<input type="email" name="email" autocomplete="off"/>
+<br/>Con Autocompletar Campo email:<br/>
+<input type="email" name="email" autocomplete="on"/>
+<!-- onfocus nos sirve para determinar en que elemento se va posicionar el cursos en forma automática cuando se carga la página
+Es un elemento de tipo booleano, por lo que solo se debe definir en un elemento del formulario de la pagina-->
+<br/>Nombre con autofocus:<br/>
+<input type="text" name="nombre" autofocus/>
+<!-- Steep me sirve para saltar entre un numero y otro con un intervalo en este ejemplo de 2 -->
+<br/>Minumo y Máximo<br/>
+<input type="number" name="cantidad" min="2" max="14" step="2" value="2" />
+<br/>Expresiones Regulares Definidas<br/>
+<input type="text" name="prefijo_pais" pattern="[A-Za-z]{3}" title="Codigo de 3 letras"/>
+<br/>Pistas o descripcion corta del formato:<br/>
+<input type="text" name="nombre" placeholder="Juan Perez">
+<br/>
+<input type="date" name="fecha" placeholder="dia/mes/año">
+<br/>Campo Requerido<br/>
+<input type="text" name="nombre" required />
+</form>
+</body>
+</html>
